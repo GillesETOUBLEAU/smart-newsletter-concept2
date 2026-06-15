@@ -15,7 +15,11 @@ opt() { # $1=source  $2=sortie  $3=largeur
 }
 
 echo "Hero / beauty shots..."
-opt "02_smart_concepthashtag2_beauty_front_hires.jpg"   hero-front.jpg      1280
+# hero : crop paysage serré sur la face avant (voiture remplit le cadre), comme la V5
+echo "  hero-front : crop serré sur la face avant..."
+magick "$SRC/02_smart_concepthashtag2_beauty_front_hires.jpg" -crop 5500x3320+2325+2230 +repage \
+  -resize "1280x>" -strip -interlace Plane -sampling-factor 4:2:0 -quality 82 "$OUT/hero-front.jpg"
+echo "  -> $OUT/hero-front.jpg ($(du -h "$OUT/hero-front.jpg" | cut -f1))"
 # tech-rear : source portrait, voiture au centre -> crop paysage 4:3 serre sur la voiture
 echo "  tech-rear : crop paysage 4:3 serre sur la voiture..."
 magick "$SRC/04_smart_concepthashtag2_beauty_rear_hires.jpg" -crop 7200x5400+1775+5450 +repage \
