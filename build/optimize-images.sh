@@ -29,7 +29,12 @@ magick "$SRC/03_smart_concepthashtag2_beauty_profile_hires.jpg" \
   -crop 9600x5714+0+4968 +repage -resize "1280x>" -strip -interlace Plane \
   -sampling-factor 4:2:0 -quality 82 "$OUT/design-profile.jpg"
 echo "  -> $OUT/design-profile.jpg ($(du -h "$OUT/design-profile.jpg" | cut -f1))"
-opt "650454-smart-hashtag5-hashtag3-hashtag1-family-shot-01-3x2-abb87a-original-1770648236.jpg" family-shot.jpg 1280
+# family-shot : crop en bande paysage serrée sur les 3 SUV (peu de ciel/sol), comme la V5
+echo "  family-shot : crop bande paysage sur les 3 SUV..."
+magick "$SRC/650454-smart-hashtag5-hashtag3-hashtag1-family-shot-01-3x2-abb87a-original-1770648236.jpg" \
+  -crop 7582x1720+0+1690 +repage -resize "1280x>" -strip -interlace Plane \
+  -sampling-factor 4:2:0 -quality 82 "$OUT/family-shot.jpg"
+echo "  -> $OUT/family-shot.jpg ($(du -h "$OUT/family-shot.jpg" | cut -f1))"
 
 echo "Interior thumbnails (recadrees au meme ratio 1.7:1 pour s'aligner cote a cote)..."
 magick "$SRC/smart_concept_hashtag2_Interior_Sketch.jpg" -crop 12708x7475+71+0 +repage \
