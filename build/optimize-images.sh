@@ -27,9 +27,13 @@ magick "$SRC/03_smart_concepthashtag2_beauty_profile_hires.jpg" \
 echo "  -> $OUT/design-profile.jpg ($(du -h "$OUT/design-profile.jpg" | cut -f1))"
 opt "650454-smart-hashtag5-hashtag3-hashtag1-family-shot-01-3x2-abb87a-original-1770648236.jpg" family-shot.jpg 1280
 
-echo "Interior thumbnails..."
-opt "smart_concept_hashtag2_Interior_Sketch.jpg"        interior-dashboard.jpg 800
-opt "smart_concept_hashtag2_Rome_Interieur_41.jpg"      interior-seat.jpg      800
+echo "Interior thumbnails (recadrees au meme ratio 1.7:1 pour s'aligner cote a cote)..."
+magick "$SRC/smart_concept_hashtag2_Interior_Sketch.jpg" -crop 12708x7475+71+0 +repage \
+  -resize "700x>" -strip -interlace Plane -sampling-factor 4:2:0 -quality 82 "$OUT/interior-dashboard.jpg"
+echo "  -> $OUT/interior-dashboard.jpg ($(du -h "$OUT/interior-dashboard.jpg" | cut -f1))"
+magick "$SRC/smart_concept_hashtag2_Rome_Interieur_41.jpg" -crop 2000x1176+0+79 +repage \
+  -resize "700x>" -strip -interlace Plane -sampling-factor 4:2:0 -quality 82 "$OUT/interior-seat.jpg"
+echo "  -> $OUT/interior-seat.jpg ($(du -h "$OUT/interior-seat.jpg" | cut -f1))"
 
 echo "ECA chassis (knock-out fond noir -> blanc, ombre douce conservee)..."
 magick "$SRC/smart_hashtag2_ECA.png" -resize "800x>" \
