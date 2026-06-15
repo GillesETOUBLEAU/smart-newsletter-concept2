@@ -18,11 +18,11 @@ echo "Hero / beauty shots..."
 opt "02_smart_concepthashtag2_beauty_front_hires.jpg"   hero-front.jpg      1280
 opt "04_smart_concepthashtag2_beauty_rear_hires.jpg"    tech-rear.jpg        800
 
-# Profil : la source est un portrait (12794x15591) avec la voiture petite au centre.
-# Crop paysage serre sur la voiture (avant coupe au bord gauche) pour matcher la maquette V5.
-echo "  profil : crop paysage serre sur la voiture..."
+# Profil : source portrait (12794x15591), voiture au centre. Crop paysage PLEINE LARGEUR
+# avec gris studio a gauche (pour le texte superpose) et la voiture a droite -> fond du bloc "design".
+echo "  profil : crop paysage pleine largeur (gris a gauche, voiture a droite)..."
 magick "$SRC/03_smart_concepthashtag2_beauty_profile_hires.jpg" \
-  -crop 5800x3700+3550+5980 +repage -resize "1100x>" -strip -interlace Plane \
+  -crop 9600x5714+0+4968 +repage -resize "1280x>" -strip -interlace Plane \
   -sampling-factor 4:2:0 -quality 82 "$OUT/design-profile.jpg"
 echo "  -> $OUT/design-profile.jpg ($(du -h "$OUT/design-profile.jpg" | cut -f1))"
 opt "650454-smart-hashtag5-hashtag3-hashtag1-family-shot-01-3x2-abb87a-original-1770648236.jpg" family-shot.jpg 1280
