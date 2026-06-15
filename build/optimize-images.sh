@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# Optimise les visuels sources HD (8-25 Mo) en JPEG email-ready (~100-250 Ko).
+# Usage : depuis la racine du repo  ->  bash build/optimize-images.sh
+set -euo pipefail
+
+SRC="../VERSION. DEF IMAGE DEF"
+OUT="assets/img"
+mkdir -p "$OUT"
+
+# helper : resize (largeur retina 2x), strip, JPEG progressif q82
+opt() { # $1=source  $2=sortie  $3=largeur
+  magick "$SRC/$1" -resize "${3}x>" -strip -interlace Plane \
+    -sampling-factor 4:2:0 -quality 82 "$OUT/$2"
+  echo "  -> $OUT/$2 ($(du -h "$OUT/$2" | cut -f1))"
+}
+
+echo "Hero / beauty shots..."
+opt "02_smart_concepthashtag2_beauty_front_hires.jpg"   hero-front.jpg      1280
+opt "03_smart_concepthashtag2_beauty_profile_hires.jpg" design-profile.jpg  1200
+opt "04_smart_concepthashtag2_beauty_rear_hires.jpg"    tech-rear.jpg        800
+opt "650454-smart-hashtag5-hashtag3-hashtag1-family-shot-01-3x2-abb87a-original-1770648236.jpg" family-shot.jpg 1280
+
+echo "Interior thumbnails..."
+opt "smart_concept_hashtag2_Interior_Sketch.jpg"        interior-dashboard.jpg 800
+opt "smart_concept_hashtag2_Rome_Interieur_41.jpg"      interior-seat.jpg      800
+
+echo "ECA chassis (knock-out fond noir -> blanc, ombre douce conservee)..."
+magick "$SRC/smart_hashtag2_ECA.png" -resize "800x>" \
+  -fuzz 10% -transparent black -background white -flatten \
+  -strip -interlace Plane -quality 88 "$OUT/tech-eca.jpg"
+echo "  -> $OUT/tech-eca.jpg ($(du -h "$OUT/tech-eca.jpg" | cut -f1))"
+
+echo "Done. Total img dir:"
+du -sh "$OUT"
