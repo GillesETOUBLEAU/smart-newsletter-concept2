@@ -7,16 +7,19 @@ Newsletter HTML email-ready annonçant le **smart Concept #2**, reproduisant fid
 
 ## Assets servis via jsDelivr
 
-Les images et polices sont référencées en URL absolue (obligatoire en email) depuis un **tag figé** :
+Les images et polices sont référencées en URL absolue (obligatoire en email) depuis un **SHA de commit figé**
+(`f334cd8ad65bcb2e830f3fb58c97a79d3dc48a78`) :
 
 ```
-https://cdn.jsdelivr.net/gh/GillesETOUBLEAU/smart-newsletter-concept2@v1/assets/img/<fichier>
-https://cdn.jsdelivr.net/gh/GillesETOUBLEAU/smart-newsletter-concept2@v1/assets/fonts/<fichier>
+https://cdn.jsdelivr.net/gh/GillesETOUBLEAU/smart-newsletter-concept2@<sha>/assets/img/<fichier>
+https://cdn.jsdelivr.net/gh/GillesETOUBLEAU/smart-newsletter-concept2@<sha>/assets/fonts/<fichier>
 ```
 
-> Un tag (`@v1`) est mis en cache **de façon permanente** par jsDelivr → les URLs dans l'email ne cassent jamais.
-> **Si tu modifies un asset**, crée un nouveau tag (`v2`, `v3`…) puis remplace `@v1` par `@v2` dans `index.html`
-> (sinon le CDN continuera de servir l'ancienne version mise en cache).
+> Un SHA de commit est **immuable** et mis en cache **de façon permanente** par jsDelivr → les URLs dans l'email ne cassent jamais.
+> (Un tag `vX` ne convient pas ici : jsDelivr le normalise en version semver et la résolution peut être instable.)
+>
+> **Si tu modifies un asset**, commit le changement, récupère le nouveau SHA (`git rev-parse HEAD`),
+> puis remplace le SHA dans les URLs de `index.html` (sinon le CDN continuera de servir l'ancienne version).
 
 ## Personnalisation par agent / concession
 
