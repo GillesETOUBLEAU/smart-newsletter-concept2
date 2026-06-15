@@ -8,7 +8,7 @@ Newsletter HTML email-ready annonçant le **smart Concept #2**, reproduisant fid
 ## Assets servis via jsDelivr
 
 Les images et polices sont référencées en URL absolue (obligatoire en email) depuis un **SHA de commit figé**
-(`315c4d9b55fbf9d4990c16a2deb44d818c440be3`) :
+(`c5d88cc76d76e4a798c038f3bc63253e1f656f1a`) :
 
 ```
 https://cdn.jsdelivr.net/gh/GillesETOUBLEAU/smart-newsletter-concept2@<sha>/assets/img/<fichier>
