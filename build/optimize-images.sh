@@ -16,7 +16,11 @@ opt() { # $1=source  $2=sortie  $3=largeur
 
 echo "Hero / beauty shots..."
 opt "02_smart_concepthashtag2_beauty_front_hires.jpg"   hero-front.jpg      1280
-opt "04_smart_concepthashtag2_beauty_rear_hires.jpg"    tech-rear.jpg        800
+# tech-rear : source portrait, voiture au centre -> crop paysage 4:3 serre sur la voiture
+echo "  tech-rear : crop paysage 4:3 serre sur la voiture..."
+magick "$SRC/04_smart_concepthashtag2_beauty_rear_hires.jpg" -crop 7200x5400+1775+5450 +repage \
+  -resize "800x>" -strip -interlace Plane -sampling-factor 4:2:0 -quality 82 "$OUT/tech-rear.jpg"
+echo "  -> $OUT/tech-rear.jpg ($(du -h "$OUT/tech-rear.jpg" | cut -f1))"
 
 # Profil : source portrait (12794x15591), voiture au centre. Crop paysage PLEINE LARGEUR
 # avec gris studio a gauche (pour le texte superpose) et la voiture a droite -> fond du bloc "design".
@@ -35,10 +39,10 @@ magick "$SRC/smart_concept_hashtag2_Rome_Interieur_41.jpg" -crop 2000x1176+0+79 
   -resize "700x>" -strip -interlace Plane -sampling-factor 4:2:0 -quality 82 "$OUT/interior-seat.jpg"
 echo "  -> $OUT/interior-seat.jpg ($(du -h "$OUT/interior-seat.jpg" | cut -f1))"
 
-echo "ECA chassis (knock-out fond noir -> blanc, ombre douce conservee)..."
-magick "$SRC/smart_hashtag2_ECA.png" -resize "800x>" \
+echo "ECA chassis (crop 4:3 + knock-out fond noir -> blanc, meme hauteur que tech-rear)..."
+magick "$SRC/smart_hashtag2_ECA.png" -crop 2200x1650+0+275 +repage \
   -fuzz 10% -transparent black -background white -flatten \
-  -strip -interlace Plane -quality 88 "$OUT/tech-eca.jpg"
+  -resize "800x>" -strip -interlace Plane -quality 88 "$OUT/tech-eca.jpg"
 echo "  -> $OUT/tech-eca.jpg ($(du -h "$OUT/tech-eca.jpg" | cut -f1))"
 
 echo "Done. Total img dir:"
