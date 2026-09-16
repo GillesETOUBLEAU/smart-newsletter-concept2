@@ -21,6 +21,9 @@ L'email charge **Zilla Slab** (Google Fonts), la plus proche en chasse, avec Geo
 Cellules vides en haut et en bas, repérées par les commentaires `ZONE AGENT`, comme pour la newsletter #2 Concept.
 
 ## Mise en ligne
-Les `src` des images sont **relatives** (`assets/img/...`) pour la preview locale et GitHub Pages.
-Pour l'envoi : commit + push, puis remplacer `assets/img/` par
-`https://cdn.jsdelivr.net/gh/GillesETOUBLEAU/smart-newsletter-concept2@<sha>/2026-09-mondial/assets/img/`.
+- `index.html` : `src` **relatives** (`assets/img/...`) pour la preview locale et GitHub Pages.
+- `Newsletter-smart-2-Mondial.html` : **version d'envoi**, images en URL absolues jsDelivr pinnées sur le SHA
+  `04e8521efb8336792a563856670c4000937bd242` (fichier autonome).
+
+Si un visuel change : commit + push, puis régénérer la version d'envoi avec le nouveau SHA :
+`sed "s#src=\"assets/img/#src=\"https://cdn.jsdelivr.net/gh/GillesETOUBLEAU/smart-newsletter-concept2@<sha>/2026-09-mondial/assets/img/#g" index.html > Newsletter-smart-2-Mondial.html`
