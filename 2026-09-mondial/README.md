@@ -11,7 +11,7 @@ Reproduction HTML email de la maquette `smart_Newsletter_V3_def.jpg` (dossier `N
 | Fresque Paris + « Découvrir la campagne… » | https://fr.smart.com/fr/models/hashtag-two/street-art-project/ |
 | Visuel reveal + « Obtenir une invitation » | https://fr.smart.com/fr/event/paris-2026/ (URL indiquée dans le règlement) |
 | « S'inscrire à la newsletter » | https://fr.smart.com/fr/models/hashtag-two/ |
-| « conditions générales de participation » | PDF du règlement (s7.future.smart.com) |
+| « conditions générales de participation » | PDF du règlement : `Reglement-du-jeu-Paris-Motorshow-2026.pdf` (s7.future.smart.com) |
 
 ## Typo
 La maquette utilise **Yorkten Slab Condensed** (Adobe Fonts, licence non embarquable) et **Avenir Next** pour la mention.
