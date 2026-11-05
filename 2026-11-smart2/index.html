@@ -10,14 +10,22 @@
   <title>La smart #2 est disponible à partir de 19 990 €</title>
   <!--[if mso]>
   <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
-  <![endif]-->
-  <!--[if !mso]><!-->
-  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600&amp;display=swap" rel="stylesheet" type="text/css" />
-  <!--<![endif]-->
   <style type="text/css">
-    /* Typo : la maquette utilise Yorkten Slab Condensed (Adobe Fonts, non embarquable)
-       -> Zilla Slab (Google Fonts, la plus proche en chasse) puis Georgia.
-       Les intertitres de la maquette sont en Avenir Next -> Avenir/Helvetica/Arial. */
+    /* Outlook Windows n'applique pas @font-face : on lui impose la substitution
+       Georgia plutot que de le laisser retomber sur Times New Roman. */
+    body,table,td,p,a,span,h1,h2,div{font-family:Georgia,'Times New Roman',serif !important;}
+  </style>
+  <![endif]-->
+  <style type="text/css">
+    /* ---- Police de marque smart : FOR smart Next (celle de la maquette) ----
+       Servie en woff2 par jsDelivr, pinnee sur le commit 263e3fe (fichiers
+       identiques depuis la newsletter de juin). Rendue par Apple Mail, Mail iOS,
+       Outlook pour Mac et Samsung Mail ; Gmail et Outlook Windows ignorent
+       @font-face et retombent sur Georgia. Cf. README, section Typo. */
+    @font-face{font-family:'FOR smart Next';font-style:normal;font-weight:400;font-display:swap;
+      src:url('https://cdn.jsdelivr.net/gh/GillesETOUBLEAU/smart-newsletter-concept2@263e3fef237a2e0af07f3c8069c70b04b4184141/assets/fonts/FORsmartNext-Regular.woff2') format('woff2');}
+    @font-face{font-family:'FOR smart Next';font-style:normal;font-weight:700;font-display:swap;
+      src:url('https://cdn.jsdelivr.net/gh/GillesETOUBLEAU/smart-newsletter-concept2@263e3fef237a2e0af07f3c8069c70b04b4184141/assets/fonts/FORsmartNext-Bold.woff2') format('woff2');}
 
     /* ---- Reset email ---- */
     html,body{margin:0 !important;padding:0 !important;height:100% !important;width:100% !important;}
@@ -25,7 +33,8 @@
     table,td{mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;border-collapse:collapse !important;}
     img{-ms-interpolation-mode:bicubic;border:0;height:auto;line-height:100%;outline:none;text-decoration:none;display:block;}
     a{text-decoration:none;}
-    strong{font-weight:600;}
+    body{font-family:'FOR smart Next',Georgia,'Times New Roman',serif;}
+    strong{font-weight:700;}
 
     /* ---- Responsive ---- */
     @media only screen and (max-width:620px){
@@ -55,13 +64,17 @@
   1. LIENS :
        « Commander la smart #2 » (x2)   -> https://fr.smart.com/fr/models/hashtag-two/order-request/
        « S’inscrire à la newsletter »   -> https://fr.smart.com/fr/models/hashtag-two/
-  2. MENTION LÉGALE : le prix porte un astérisque (« 19 990 €* ») renvoyant
+  2. TYPO : FOR smart Next (slab corporate smart), chargée en woff2 depuis
+     jsDelivr. Affichée par Apple Mail, Mail iOS, Outlook Mac, Samsung Mail ;
+     Gmail et Outlook Windows ignorent @font-face et affichent Georgia.
+     Choix assumé par la cliente. Détail dans le README, section Typo.
+  3. MENTION LÉGALE : le prix porte un astérisque (« 19 990 €* ») renvoyant
      à « *Voir conditions sur smart.com », placé sous le CTA newsletter.
-  3. ENVOI géré par le client : objet de l'email et toute mention légale
+  4. ENVOI géré par le client : objet de l'email et toute mention légale
      complémentaire (bonus, date de validité, version concernée, autonomie
      290 km / WLTP) sont de son ressort. Le preheader ci-dessous est une
      proposition, à conserver ou à remplacer.
-  4. ZONES AGENT (en-tête + pied de page) laissées VIDES, repérées par les
+  5. ZONES AGENT (en-tête + pied de page) laissées VIDES, repérées par les
      commentaires « ZONE AGENT » -> à compléter par chaque agent/concession.
   ============================================================================
   -->
@@ -80,7 +93,7 @@
           <!-- ZONE AGENT (HAUT) : éditer ce bloc pour chaque agent/concession -->
           <!-- ============================================================= -->
           <tr>
-            <td align="center" style="padding:16px 22px 0 22px;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-size:12px;letter-spacing:1.5px;color:#1a1a1a;text-transform:uppercase;">
+            <td align="center" style="padding:16px 22px 0 22px;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-size:12px;letter-spacing:1.5px;color:#1a1a1a;text-transform:uppercase;">
               &nbsp;
             </td>
           </tr>
@@ -88,15 +101,15 @@
           <!-- TITRE -->
           <tr>
             <td class="px" align="center" style="padding:22px 20px 0 20px;">
-              <h1 class="h1" style="margin:0;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:30px;line-height:1.15;color:#111111;letter-spacing:-0.3px;">La smart&nbsp;#2 est disponible<br class="br-d" /> à partir de 19&nbsp;990&nbsp;€*</h1>
+              <h1 class="h1" style="margin:0;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:30px;line-height:1.15;color:#111111;letter-spacing:-0.3px;">La smart&nbsp;#2 est disponible<br class="br-d" /> à partir de 19&nbsp;990&nbsp;€*</h1>
             </td>
           </tr>
 
           <!-- INTRO -->
           <tr>
-            <td class="px" align="center" style="padding:34px 24px 32px 24px;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:16px;line-height:1.45;color:#1a1a1a;">
-              <p style="margin:0 0 14px 0;"><strong style="font-weight:600;">La nouvelle smart&nbsp;#2, citadine deux places 100&nbsp;%&nbsp;électrique,</strong><br class="br-d" /> est désormais <strong style="font-weight:600;">disponible à la commande</strong>.</p>
-              <p style="margin:0;">Dévoilée récemment au Mondial de l’Auto à Paris, elle marque le retour<br class="br-d" /> d’une <strong style="font-weight:600;">icône</strong> de la <strong style="font-weight:600;">mobilité urbaine</strong>, dans une <strong style="font-weight:600;">version plus moderne</strong>.</p>
+            <td class="px" align="center" style="padding:34px 24px 32px 24px;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:16px;line-height:1.45;color:#1a1a1a;">
+              <p style="margin:0 0 14px 0;"><strong style="font-weight:700;">La nouvelle smart&nbsp;#2, citadine deux places 100&nbsp;%&nbsp;électrique,</strong><br class="br-d" /> est désormais <strong style="font-weight:700;">disponible à la commande</strong>.</p>
+              <p style="margin:0;">Dévoilée récemment au Mondial de l’Auto à Paris, elle marque le retour<br class="br-d" /> d’une <strong style="font-weight:700;">icône</strong> de la <strong style="font-weight:700;">mobilité urbaine</strong>, dans une <strong style="font-weight:700;">version plus moderne</strong>.</p>
             </td>
           </tr>
 
@@ -109,7 +122,7 @@
               </v:roundrect>
               <![endif]-->
               <!--[if !mso]><!-- -->
-              <a class="btn-long" href="https://fr.smart.com/fr/models/hashtag-two/order-request/" target="_blank" style="display:inline-block;width:260px;background-color:#000000;color:#ffffff;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:17px;line-height:52px;text-align:center;text-decoration:none;border-radius:26px;">Commander la smart&nbsp;#2</a>
+              <a class="btn-long" href="https://fr.smart.com/fr/models/hashtag-two/order-request/" target="_blank" style="display:inline-block;width:260px;background-color:#000000;color:#ffffff;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:17px;line-height:52px;text-align:center;text-decoration:none;border-radius:26px;">Commander la smart&nbsp;#2</a>
               <!--<![endif]-->
             </td>
           </tr>
@@ -127,10 +140,10 @@
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
                   <td class="stack" width="380" valign="top" style="width:380px;padding:0 40px 0 38px;">
-                    <h2 class="h2" style="margin:0 0 26px 0;font-family:'Avenir Next',Avenir,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;font-size:27px;line-height:1.22;color:#111111;">La nouvelle smart&nbsp;#2<br />100&nbsp;%&nbsp;électrique,<br />a de quoi surprendre&nbsp;:</h2>
-                    <p style="margin:0 0 16px 0;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:16px;line-height:1.4;color:#1a1a1a;"><strong style="font-weight:600;">Jusqu’à 290&nbsp;km d’autonomie</strong> pour vous accompagner dans tous vos déplacements.</p>
-                    <p style="margin:0 0 16px 0;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:16px;line-height:1.4;color:#1a1a1a;"><strong style="font-weight:600;">Seulement 2,746&nbsp;m de long</strong> pour se faufiler partout et se garer facilement.</p>
-                    <p style="margin:0;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:16px;line-height:1.4;color:#1a1a1a;"><strong style="font-weight:600;">De 10 à 80&nbsp;% de charge en 20&nbsp;minutes</strong> pour reprendre la route sans perdre de temps.</p>
+                    <h2 class="h2" style="margin:0 0 26px 0;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:27px;line-height:1.22;color:#111111;">La nouvelle smart&nbsp;#2<br />100&nbsp;%&nbsp;électrique,<br />a de quoi surprendre&nbsp;:</h2>
+                    <p style="margin:0 0 16px 0;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:16px;line-height:1.4;color:#1a1a1a;"><strong style="font-weight:700;">Jusqu’à 290&nbsp;km d’autonomie</strong> pour vous accompagner dans tous vos déplacements.</p>
+                    <p style="margin:0 0 16px 0;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:16px;line-height:1.4;color:#1a1a1a;"><strong style="font-weight:700;">Seulement 2,746&nbsp;m de long</strong> pour se faufiler partout et se garer facilement.</p>
+                    <p style="margin:0;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:16px;line-height:1.4;color:#1a1a1a;"><strong style="font-weight:700;">De 10 à 80&nbsp;% de charge en 20&nbsp;minutes</strong> pour reprendre la route sans perdre de temps.</p>
                   </td>
                   <td class="stack-img" width="260" valign="top" style="width:260px;padding:18px 3px 0 0;font-size:0;line-height:0;">
                     <img src="assets/img/charge.jpg" width="254" alt="La smart #2 dorée branchée à un câble de recharge" style="width:254px;max-width:254px;height:auto;display:block;" />
@@ -143,7 +156,7 @@
           <!-- TITRE intérieur -->
           <tr>
             <td class="px" align="center" style="padding:44px 20px 34px 20px;">
-              <h2 class="h2" style="margin:0;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:30px;line-height:1.2;color:#111111;letter-spacing:-0.3px;">Petite à l’extérieur, grande à l’intérieur&nbsp;!</h2>
+              <h2 class="h2" style="margin:0;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:30px;line-height:1.2;color:#111111;letter-spacing:-0.3px;">Petite à l’extérieur, grande à l’intérieur&nbsp;!</h2>
             </td>
           </tr>
 
@@ -155,11 +168,11 @@
                   <td class="stack-img" width="300" valign="top" style="width:300px;padding:0;font-size:0;line-height:0;">
                     <img src="assets/img/interieur.jpg" width="294" alt="Intérieur de la smart #2 : sellerie cuir cognac, écran central et aérateurs ronds" style="width:294px;max-width:294px;height:auto;display:block;" />
                   </td>
-                  <td class="stack" width="340" valign="top" align="right" style="width:340px;padding:0 38px 0 14px;text-align:right;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:16px;line-height:1.4;color:#1a1a1a;">
-                    <p style="margin:0 0 14px 0;"><strong style="font-weight:600;">Un design iconique revisité</strong>, qui conserve l’ADN de la smart fortwo tout en affichant un style résolument moderne.</p>
-                    <p style="margin:0 0 14px 0;"><strong style="font-weight:600;">Une banquette intégrale</strong>, pour un habitacle aussi accueillant que confortable.</p>
-                    <p style="margin:0 0 14px 0;"><strong style="font-weight:600;">Un espace intérieur optimisé</strong>, pour profiter d’un maximum de confort dans un format ultra-compact.</p>
-                    <p style="margin:0;"><strong style="font-weight:600;">Des rangements astucieux</strong>, pour emporter tout ce dont vous avez besoin au quotidien.</p>
+                  <td class="stack" width="340" valign="top" align="right" style="width:340px;padding:0 38px 0 14px;text-align:right;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:16px;line-height:1.4;color:#1a1a1a;">
+                    <p style="margin:0 0 14px 0;"><strong style="font-weight:700;">Un design iconique revisité</strong>, qui conserve l’ADN de la smart fortwo tout en affichant un style résolument moderne.</p>
+                    <p style="margin:0 0 14px 0;"><strong style="font-weight:700;">Une banquette intégrale</strong>, pour un habitacle aussi accueillant que confortable.</p>
+                    <p style="margin:0 0 14px 0;"><strong style="font-weight:700;">Un espace intérieur optimisé</strong>, pour profiter d’un maximum de confort dans un format ultra-compact.</p>
+                    <p style="margin:0;"><strong style="font-weight:700;">Des rangements astucieux</strong>, pour emporter tout ce dont vous avez besoin au quotidien.</p>
                   </td>
                 </tr>
               </table>
@@ -175,8 +188,8 @@
 
           <!-- INTRO finitions -->
           <tr>
-            <td class="px" align="center" style="padding:38px 30px 34px 30px;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:16px;line-height:1.45;color:#1a1a1a;">
-              Parce que chaque conducteur est unique, la nouvelle <strong style="font-weight:600;">smart&nbsp;#2 se décline<br class="br-d" /> en trois lignes de finition</strong>, pour répondre à toutes les envies.
+            <td class="px" align="center" style="padding:38px 30px 34px 30px;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:16px;line-height:1.45;color:#1a1a1a;">
+              Parce que chaque conducteur est unique, la nouvelle <strong style="font-weight:700;">smart&nbsp;#2 se décline<br class="br-d" /> en trois lignes de finition</strong>, pour répondre à toutes les envies.
             </td>
           </tr>
 
@@ -185,17 +198,17 @@
             <td class="px" style="padding:0 30px;">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
-                  <td class="trio trio-first" width="33%" valign="top" align="center" style="width:33%;padding:0 14px;text-align:center;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:15px;line-height:1.4;color:#1a1a1a;">
-                    <p class="h3" style="margin:0 0 12px 0;font-weight:500;font-size:19px;line-height:1.2;color:#111111;">Pure</p>
-                    <p style="margin:0;">L’essentiel de la <strong style="font-weight:600;">mobilité urbaine</strong>, sans compromis sur les équipements.</p>
+                  <td class="trio trio-first" width="33%" valign="top" align="center" style="width:33%;padding:0 14px;text-align:center;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:15px;line-height:1.4;color:#1a1a1a;">
+                    <p class="h3" style="margin:0 0 12px 0;font-weight:400;font-size:19px;line-height:1.2;color:#111111;">Pure</p>
+                    <p style="margin:0;">L’essentiel de la <strong style="font-weight:700;">mobilité urbaine</strong>, sans compromis sur les équipements.</p>
                   </td>
-                  <td class="trio" width="34%" valign="top" align="center" style="width:34%;padding:0 14px;text-align:center;border-left:2px dotted #1a1a1a;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:15px;line-height:1.4;color:#1a1a1a;">
-                    <p class="h3" style="margin:0 0 12px 0;font-weight:500;font-size:19px;line-height:1.2;color:#111111;">Pure+</p>
-                    <p style="margin:0;">Encore <strong style="font-weight:600;">plus de confort</strong> au quotidien, avec notamment un <strong style="font-weight:600;">siège conducteur chauffant</strong> et une <strong style="font-weight:600;">recharge AC de 11&nbsp;kW</strong>.</p>
+                  <td class="trio" width="34%" valign="top" align="center" style="width:34%;padding:0 14px;text-align:center;border-left:2px dotted #1a1a1a;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:15px;line-height:1.4;color:#1a1a1a;">
+                    <p class="h3" style="margin:0 0 12px 0;font-weight:400;font-size:19px;line-height:1.2;color:#111111;">Pure+</p>
+                    <p style="margin:0;">Encore <strong style="font-weight:700;">plus de confort</strong> au quotidien, avec notamment un <strong style="font-weight:700;">siège conducteur chauffant</strong> et une <strong style="font-weight:700;">recharge AC de 11&nbsp;kW</strong>.</p>
                   </td>
-                  <td class="trio" width="33%" valign="top" align="center" style="width:33%;padding:0 14px;text-align:center;border-left:2px dotted #1a1a1a;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:15px;line-height:1.4;color:#1a1a1a;">
-                    <p class="h3" style="margin:0 0 12px 0;font-weight:500;font-size:19px;line-height:1.2;color:#111111;">Premium</p>
-                    <p style="margin:0;">Une expérience à bord qui allie <strong style="font-weight:600;">confort et plaisir</strong>, avec le <strong style="font-weight:600;">toit panoramique Halo</strong> et le système audio <strong style="font-weight:600;">Sennheiser</strong> à <strong style="font-weight:600;">7 haut-parleurs</strong>.</p>
+                  <td class="trio" width="33%" valign="top" align="center" style="width:33%;padding:0 14px;text-align:center;border-left:2px dotted #1a1a1a;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:15px;line-height:1.4;color:#1a1a1a;">
+                    <p class="h3" style="margin:0 0 12px 0;font-weight:400;font-size:19px;line-height:1.2;color:#111111;">Premium</p>
+                    <p style="margin:0;">Une expérience à bord qui allie <strong style="font-weight:700;">confort et plaisir</strong>, avec le <strong style="font-weight:700;">toit panoramique Halo</strong> et le système audio <strong style="font-weight:700;">Sennheiser</strong> à <strong style="font-weight:700;">7 haut-parleurs</strong>.</p>
                   </td>
                 </tr>
               </table>
@@ -204,7 +217,7 @@
 
           <!-- ACCROCHE + CTA commande (2) -->
           <tr>
-            <td class="px" align="center" style="padding:36px 24px 26px 24px;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:600;font-size:17px;line-height:1.4;color:#1a1a1a;">
+            <td class="px" align="center" style="padding:36px 24px 26px 24px;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:700;font-size:17px;line-height:1.4;color:#1a1a1a;">
               Quelle smart&nbsp;#2 est faite pour vous&nbsp;?
             </td>
           </tr>
@@ -216,7 +229,7 @@
               </v:roundrect>
               <![endif]-->
               <!--[if !mso]><!-- -->
-              <a class="btn-long" href="https://fr.smart.com/fr/models/hashtag-two/order-request/" target="_blank" style="display:inline-block;width:260px;background-color:#000000;color:#ffffff;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:17px;line-height:52px;text-align:center;text-decoration:none;border-radius:26px;">Commander la smart&nbsp;#2</a>
+              <a class="btn-long" href="https://fr.smart.com/fr/models/hashtag-two/order-request/" target="_blank" style="display:inline-block;width:260px;background-color:#000000;color:#ffffff;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:17px;line-height:52px;text-align:center;text-decoration:none;border-radius:26px;">Commander la smart&nbsp;#2</a>
               <!--<![endif]-->
             </td>
           </tr>
@@ -226,8 +239,8 @@
             <td class="px" align="center" style="padding:30px 30px 34px 30px;background-color:#e0ddd6;">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <tr>
-                  <td align="center" style="padding:0 0 20px 0;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:16px;line-height:1.45;color:#1a1a1a;">
-                    Soyez parmi les <strong style="font-weight:600;">premiers à découvrir</strong> les dernières <strong style="font-weight:600;">actualités,<br class="br-d" /> nouveautés</strong> et <strong style="font-weight:600;">informations exclusives</strong> sur la <strong style="font-weight:600;">smart&nbsp;#2</strong>.
+                  <td align="center" style="padding:0 0 20px 0;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:16px;line-height:1.45;color:#1a1a1a;">
+                    Soyez parmi les <strong style="font-weight:700;">premiers à découvrir</strong> les dernières <strong style="font-weight:700;">actualités,<br class="br-d" /> nouveautés</strong> et <strong style="font-weight:700;">informations exclusives</strong> sur la <strong style="font-weight:700;">smart&nbsp;#2</strong>.
                   </td>
                 </tr>
                 <tr>
@@ -238,12 +251,12 @@
                     </v:roundrect>
                     <![endif]-->
                     <!--[if !mso]><!-- -->
-                    <a class="btn-long" href="https://fr.smart.com/fr/models/hashtag-two/" target="_blank" style="display:inline-block;width:268px;background-color:#000000;color:#ffffff;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:17px;line-height:52px;text-align:center;text-decoration:none;border-radius:26px;">S’inscrire à la newsletter</a>
+                    <a class="btn-long" href="https://fr.smart.com/fr/models/hashtag-two/" target="_blank" style="display:inline-block;width:268px;background-color:#000000;color:#ffffff;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:17px;line-height:52px;text-align:center;text-decoration:none;border-radius:26px;">S’inscrire à la newsletter</a>
                     <!--<![endif]-->
                   </td>
                 </tr>
                 <tr>
-                  <td align="center" style="padding:16px 0 0 0;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-weight:400;font-size:12px;line-height:1.4;color:#4a4a4a;">
+                  <td align="center" style="padding:16px 0 0 0;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-weight:400;font-size:12px;line-height:1.4;color:#4a4a4a;">
                     *Voir conditions sur smart.com
                   </td>
                 </tr>
@@ -255,7 +268,7 @@
           <!-- ZONE AGENT (BAS) : liens personnalisés de l’agent/concession  -->
           <!-- ============================================================= -->
           <tr>
-            <td align="center" style="padding:16px 30px 30px 30px;font-family:'Zilla Slab',Georgia,'Times New Roman',serif;font-size:15px;color:#1a1a1a;">
+            <td align="center" style="padding:16px 30px 30px 30px;font-family:'FOR smart Next',Georgia,'Times New Roman',serif;font-size:15px;color:#1a1a1a;">
               &nbsp;
             </td>
           </tr>

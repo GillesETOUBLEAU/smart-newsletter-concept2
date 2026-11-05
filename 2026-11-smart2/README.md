@@ -38,14 +38,34 @@ La maquette écrit « 19 990€ » sans espace avant le symbole. L'email appliqu
 typographique française : `19&nbsp;990&nbsp;€`. À arbitrer avec le client.
 
 ## Typo
-Maquette : **Yorkten Slab Condensed** (titres et textes courants) + **Avenir Next**
-(intertitre « La nouvelle smart #2 100 % électrique, a de quoi surprendre : »).
-Yorkten est une police Adobe Fonts, licence non embarquable → l'email charge
-**Zilla Slab** (Google Fonts, la plus proche en chasse) avec Georgia en repli
-(Outlook, Gmail), et Avenir Next → Avenir / Helvetica / Arial.
+La maquette est composée **intégralement en FOR smart Next**, le slab corporate
+smart — titre, intertitres, textes courants, boutons. Vérifié par comparaison des
+tracés avec la fonte installée : ce n'est ni Yorkten Slab Condensed ni Avenir Next,
+contrairement à ce qui avait été supposé en septembre.
 
-Zilla Slab étant moins condensée que Yorkten, le titre principal passe sur deux lignes
-(une seule dans la maquette) et les colonnes de finitions ont une ligne de plus.
+L'email charge donc la vraie police de marque, en `woff2` servi par jsDelivr depuis
+`assets/fonts/` à la racine du dépôt (fichiers inchangés depuis la newsletter de
+juin, pin `263e3fe`) :
+
+| Graisse | Fichier | Poids |
+| --- | --- | --- |
+| 400 | `FORsmartNext-Regular.woff2` | 44 ko |
+| 700 | `FORsmartNext-Bold.woff2` | 44 ko |
+
+La fonte n'existe qu'en 400 et 700 : les `font-weight:600` sont passés à **700**
+et les titres de finition (Pure / Pure+ / Premium) de 500 à **400**, conformément
+à la maquette.
+
+### Ce que verront les destinataires
+- **FOR smart Next** : Apple Mail, Mail iOS, Outlook pour Mac, Samsung Mail,
+  Thunderbird.
+- **Georgia** (repli) : Gmail web / iOS / Android, Outlook Windows, Yahoo — ces
+  clients ignorent `@font-face`. Georgia reste un serif, la couleur de page est
+  préservée. Un bloc conditionnel `<!--[if mso]>` impose Georgia à Outlook Windows,
+  qui sinon retomberait sur Times New Roman.
+
+Compromis exposé à la cliente le 05/11/2026 : elle demande la police de marque
+malgré la dégradation sur une partie du parc.
 
 ## Recadrages
 Les quatre visuels HD sont recadrés aux proportions relevées sur la maquette
