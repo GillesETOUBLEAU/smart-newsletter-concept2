@@ -56,6 +56,20 @@ La fonte n'existe qu'en 400 et 700 : les `font-weight:600` sont passés à **700
 et les titres de finition (Pure / Pure+ / Premium) de 500 à **400**, conformément
 à la maquette.
 
+### Titre sur une seule ligne
+La police de marque étant plus étroite que la substitution Zilla Slab, le titre
+tient désormais sur **une ligne comme la maquette** : 28 px, le `<br class="br-d">`
+retiré. Largeurs mesurées pour 600 px disponibles dans le conteneur :
+
+| Police rendue | Largeur du titre | Lignes |
+| --- | --- | --- |
+| FOR smart Next | 579 px | 1 |
+| Georgia (repli) | 577 px | 1 |
+| Times New Roman (si le repli saute) | 521 px | 1 |
+
+Une insécable lie « à » à « partir » : en mobile (26 px, deux lignes) la césure
+tombe après « disponible » et non sur la préposition.
+
 ### Ce que verront les destinataires
 - **FOR smart Next** : Apple Mail, Mail iOS, Outlook pour Mac, Samsung Mail,
   Thunderbird.
