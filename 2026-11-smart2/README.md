@@ -16,11 +16,18 @@ URL confirmées par le client le 05/11/2026 (titres de page vérifiés :
 « Précommandez dès maintenant la nouvelle smart #2 | smart » et
 « smart #2 – Voiture 2 places électrique | L'actu | smart »).
 
+## Mention légale du prix
+
+Le prix du titre porte un astérisque — « à partir de 19 990 €* » — renvoyant
+à la mention « *Voir conditions sur smart.com », placée sous le CTA
+« S’inscrire à la newsletter » (12 px, gris #4a4a4a, sur le fond grège).
+Ajout du 05/11/2026 : la maquette n'en comportait pas.
+
 ## Périmètre
 
 L'envoi est géré par le client. Restent donc de son côté, hors de ce dépôt :
-l'**objet** de l'email et les **mentions légales** (prix « à partir de 19 990 € »,
-autonomie 290 km / WLTP), absentes de la maquette.
+l'**objet** de l'email et toute **mention légale complémentaire** (bonus, date
+de validité, version concernée, autonomie 290 km / WLTP).
 
 Le **preheader** présent en haut du `body` est une proposition rédigée ici,
 à conserver ou à remplacer par le client.
