@@ -16,14 +16,14 @@ URL confirmées par le client le 05/11/2026 (titres de page vérifiés :
 « Précommandez dès maintenant la nouvelle smart #2 | smart » et
 « smart #2 – Voiture 2 places électrique | L'actu | smart »).
 
-## ⚠️ Reste à valider
+## Périmètre
 
-| Élément | État |
-|---|---|
-| Objet de l'email | **manquant** |
-| Preheader | proposition à valider (en haut du `body`) |
-| Mention légale du prix « à partir de 19 990 € » | absente de la maquette — à confirmer |
-| Mention WLTP sur « jusqu'à 290 km d'autonomie » | absente de la maquette — à confirmer |
+L'envoi est géré par le client. Restent donc de son côté, hors de ce dépôt :
+l'**objet** de l'email et les **mentions légales** (prix « à partir de 19 990 € »,
+autonomie 290 km / WLTP), absentes de la maquette.
+
+Le **preheader** présent en haut du `body` est une proposition rédigée ici,
+à conserver ou à remplacer par le client.
 
 ## Écart assumé avec la maquette
 
